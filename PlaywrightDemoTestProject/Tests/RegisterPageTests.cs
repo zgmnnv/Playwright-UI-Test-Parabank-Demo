@@ -41,13 +41,14 @@ namespace PlaywrightDemoTestProject
         [Test]
         public async Task GoToRegistrationPageByUrl_InspectRegisterFormTitles()
         {
-            await registerPage.openPage();
+            await registerPage.OpenPage();
 
-            var isRegisterFormTitleValid =  await registerPage.inspectRegisterFormTitle();
-            var isRegisterFormSubtitleValid = await registerPage.inspectRegisterFormSubtitle();
+            var isRegisterFormTitleValid =  await registerPage.InspectRegisterFormTitle();
+            var isRegisterFormSubtitleValid = await registerPage.InspectRegisterFormSubtitle();
 
             Assert.IsTrue(isRegisterFormTitleValid);
             Assert.IsTrue(isRegisterFormSubtitleValid);
         }
+
     }
 }
